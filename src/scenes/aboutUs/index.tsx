@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
-import Benefit from "./Benefit";
+import AboutUs from "./AboutUs";
 
 const benefits: Array<BenefitType> = [
   {
@@ -44,13 +44,14 @@ type Props = {
 
 const Benefits = ({ setSelectedPage }: Props) => {
   return (
-    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
+    <section id="aboutus" className="bg-black text-red-600 min-h-full">
       <motion.div
+      className="mx-auto w-5/6 py-20"
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         {/* HEADER */}
         <motion.div
-          className="md:my-5 md:w-3/5"
+          className="md:my-5 md:w-3/5 "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -60,7 +61,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <HText>MORE THAN JUST GYM.</HText>
+          <HText>HAIR, BEARD, STYLE... YOU NAME IT AND WE MAKE IT BETTER</HText>
           <p className="my-5 text-sm">
             We provide world class fitness equipment, trainers and classes to
             get you to your ultimate fitness goals with ease. We provide true
@@ -77,7 +78,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           variants={container}
         >
           {benefits.map((benefit: BenefitType) => (
-            <Benefit
+            <AboutUs
               key={benefit.title}
               icon={benefit.icon}
               title={benefit.title}

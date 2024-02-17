@@ -14,7 +14,7 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
+const AboutUs = ({ icon, title, description, setSelectedPage }: Props) => {
   return (
     <motion.div
       variants={childVariant}
@@ -33,10 +33,10 @@ const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
         onClick={() => setSelectedPage(SelectedPage.ContactUs)}
         href={`#${SelectedPage.ContactUs}`}
       >
-        <p>Learn More</p>
+        <p>Contact Us!</p>
       </AnchorLink>
     </motion.div>
   );
 };
 
-export default Benefit;
+export default AboutUs;
